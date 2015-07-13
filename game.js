@@ -1,6 +1,7 @@
-var b = new Blackjack();
+var croupier = new Gamer("Croupier");
+var b = new Blackjack(croupier);
 var g = new Gamer("ersan");
 b.getCards();
 b.shuffleCards();
-g.getCard(b.cards);
-console.log(b.check(g));
+console.log(b.hit(g));
+console.log(b.hit(g));
