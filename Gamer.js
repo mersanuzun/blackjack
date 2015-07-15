@@ -1,7 +1,12 @@
-function Gamer(name){
+function Gamer(name, gamerID){
     this.name = name;
+    this.gamerID = gamerID;
     this.firstHand = [];
     this.secondHand = [];
+    this.firstHandSumCards = 0;
+    this.secondHandSumCards = 0;
+    this.firstHandBlackjack = false;
+    this.secondHandBlackjack = false;
     this.firstHandStatus = true;
     this.secondHandStatus = true;
     this.splited = false;
