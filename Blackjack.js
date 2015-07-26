@@ -60,33 +60,30 @@ Blackjack.prototype.hit = function(gamerID){
         if (this.gamers[gamerID].firstHandStand == false && this.gamers[gamerID].firstHandStatus){
             if (this.drawCard(this.gamers[gamerID].firstHand)){
                 this.gamers[gamerID].firstHandSumCards = this.sumCards(this.gamers[gamerID].firstHand);
-                return this.gamers[gamerID].firstHandSumCards;
             }else{
                 this.gamers[gamerID].firstHandSumCards = this.sumCards(this.gamers[gamerID].firstHand);
                 this.gamers[gamerID].firstHandStatus = false;
-                return this.gamers[gamerID].firstHandSumCards;
             }
+            if (this.gamers[gamerID].firstHandSumCards == 21) this.gamers[gamerID].firstHandBlackjack = true
         }else if (this.gamers[gamerID].secondHandStand == false && this.gamers[gamerID].secondHandStatus) {
             if (this.drawCard(this.gamers[gamerID].secondHand)){
                 this.gamers[gamerID].secondHandSumCards = this.sumCards(this.gamers[gamerID].secondHand);
-                return this.gamers[gamerID].secondHandSumCards;
             }else{
                 this.gamers[gamerID].secondHandSumCards = this.sumCards(this.gamers[gamerID].secondHand);
                 this.gamers[gamerID].secondHandStatus = false;
-                return this.gamers[gamerID].secondHandSumCards;
             }
+            if (this.gamers[gamerID].secondHandSumCards == 21) this.gamers[gamerID].secondHandBlackjack = true
         }
     }else {
         if (this.gamers[gamerID].firstHandStatus){
             if (this.drawCard(this.gamers[gamerID].firstHand)){
                     this.gamers[gamerID].firstHandSumCards = this.sumCards(this.gamers[gamerID].firstHand);
-                    return this.gamers[gamerID].firstHandSumCards;
                 }else{
                     this.gamers[gamerID].firstHandSumCards = this.sumCards(this.gamers[gamerID].firstHand);
                     this.gamers[gamerID].firstHandStatus = false;
-                    return this.gamers[gamerID].firstHandSumCards;
             }
         }
+        if (this.gamers[gamerID].firstHandSumCards == 21) this.gamers[gamerID].firstHandBlackjack = true
     }
 }
 Blackjack.prototype.hitCroupier = function(visibility){
