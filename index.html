@@ -1,11 +1,74 @@
 <html>
     <head>
         <title></title>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="Card.js"></script>
         <script type="text/javascript" src="Blackjack.js"></script>
         <script type="text/javascript" src="Gamer.js"></script>
         <script type="text/javascript" src="game.js"></script>
+        <script>
+            
+        </script>
     </head>
     <body>
+        <div id="content">
+          <div id="create-gamer">
+             <table>
+               <tr>
+                   <td>Nickname</td>
+                   <td><input type="text" id="nickname"></td>
+                   <td><input type="button" id="create-user" style="width:75px;" value="Join"></td>
+               </tr>  
+             </table>
+          </div>
+           <div id="blackjack" style="display:none;">
+                <div id="croupier">crouoier</div>
+                <div id="cards">
+                    
+                </div>
+                <a class="sit">
+                    <div class="gamer">
+                        <div class="gamer-info" id="gamer1">
+                           <table style="width:192px;">
+                               <tr>
+                                   <td style="width:75px;">
+                                      <span id="show-nickname" style="margin-top:100px;"></span>
+                                   </td>
+                                   <td style="text-align:center;">
+                                       <b><span id="show-sum-cards">-</span></b></td>
+                                   <td>
+                                       <span id="show-money" style="margin:5px; float:right;"></span>
+                                   </td>
+                               </tr>
+                           </table>
+                        </div>
+                        <div style="border:solid 1px; height:97px;">
+                            <div class="card">
+                        <table>
+                            <tr>
+                                <td class="card-number-left"></td>
+                                
+                                <td class="card-number-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="card-symbol" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td class="card-number-left"></td>
+                                <td class="card-number-right"></td>
+                            </tr>                            
+                        </table>        
+                    </div>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" class="button hit" value="HIT">  
+                            <input type="button" class="button stand" value="STAND">  
+                            <input type="button" class="button split" value="SPLIT"> 
+                        </div>
+                    </div>
+                </a>
+           </div>
+        </div>
     </body>
 </html>

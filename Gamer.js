@@ -2,6 +2,7 @@ function Gamer(name, gamerID){
     this.name = name;
     this.gamerID = gamerID;
     this.firstHand = [];
+    this.money = 1000;
     this.secondHand = [];
     this.firstHandSumCards = 0;
     this.secondHandSumCards = 0;
